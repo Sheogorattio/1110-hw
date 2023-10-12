@@ -1,0 +1,28 @@
+﻿<Window x:Class="_1110_hw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1110_hw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBlock Text="Number A" Margin="5"/>
+            <TextBox x:Name ="txtBoxA" Width="90" Height="20" Text="{Binding Path=A_value, Mode=OneWayToSource}"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Number B" Margin="5"/>
+            <TextBox x:Name ="txtBoxB" Width="90" Height="20" Text="{Binding Path=B_value, Mode=OneWayToSource}"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock Text="Result" Margin="5"/>
+            <TextBox x:Name ="txtBoxResult" Width="90" Height="20" Text="{Binding Path=Result, Mode=OneWay}" IsReadOnly="True"/>
+        </WrapPanel>
+    </Grid>
+</Window>
